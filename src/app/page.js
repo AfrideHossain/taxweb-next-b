@@ -1,32 +1,10 @@
-import Image from "next/image";
 import React from "react";
-// "https://image.similarpng.com/very-thumbnail/2021/06/Law-firm-logo-icon-design-5.png"
+import Hero from "./components/Homepage/Hero";
 const Home = () => {
   return (
-    <div className="bg-gray-900 text-gray-100 font-sans">
+    <div className="bg-gray-900 text-gray-100">
       {/* Hero Section */}
-      <section className="min-h-screen flex flex-col items-center justify-center text-center px-4">
-        <div className="mb-6">
-          <Image
-            src="https://image.similarpng.com/very-thumbnail/2021/06/Law-firm-logo-icon-design-5.png"
-            alt="Law Firm Logo"
-            width={120}
-            height={120}
-            className="rounded-lg shadow-lg"
-            priority
-          />
-        </div>
-        <h1 className="text-4xl font-bold text-gray-200 mb-4">
-          Trusted Tax Law Experts in Bangladesh
-        </h1>
-        <p className="text-gray-400 max-w-md mx-auto mb-6">
-          Providing expert tax law services with a focus on compliance, dispute
-          resolution, and personalized consulting.
-        </p>
-        <button className="px-6 py-3 bg-indigo-500 text-white font-semibold rounded-md hover:bg-indigo-600 transition">
-          Book a Consultation
-        </button>
-      </section>
+      <Hero />
 
       {/* Services Section */}
       <section className="py-16 bg-gray-800">
@@ -60,8 +38,8 @@ const Home = () => {
         <div className="flex flex-wrap justify-center gap-6">
           <div className="w-64 p-6 bg-gray-800 text-center rounded-lg shadow-md">
             <p className="text-gray-400">
-              "Professional service! They helped me with my tax filings quickly
-              and efficiently."
+              {`"Professional service! They helped me with my tax filings quickly
+              and efficiently."`}
             </p>
             <h4 className="mt-4 font-bold text-gray-200">
               - A Satisfied Client
