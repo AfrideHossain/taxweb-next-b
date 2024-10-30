@@ -1,101 +1,90 @@
 import Image from "next/image";
-
-export default function Home() {
+import React from "react";
+// "https://image.similarpng.com/very-thumbnail/2021/06/Law-firm-logo-icon-design-5.png"
+const Home = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="bg-gray-900 text-gray-100 font-sans">
+      {/* Hero Section */}
+      <section className="min-h-screen flex flex-col items-center justify-center text-center px-4">
+        <div className="mb-6">
+          <Image
+            src="https://image.similarpng.com/very-thumbnail/2021/06/Law-firm-logo-icon-design-5.png"
+            alt="Law Firm Logo"
+            width={120}
+            height={120}
+            className="rounded-lg shadow-lg"
+            priority
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <h1 className="text-4xl font-bold text-gray-200 mb-4">
+          Trusted Tax Law Experts in Bangladesh
+        </h1>
+        <p className="text-gray-400 max-w-md mx-auto mb-6">
+          Providing expert tax law services with a focus on compliance, dispute
+          resolution, and personalized consulting.
+        </p>
+        <button className="px-6 py-3 bg-indigo-500 text-white font-semibold rounded-md hover:bg-indigo-600 transition">
+          Book a Consultation
+        </button>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-16 bg-gray-800">
+        <h2 className="text-3xl font-bold text-center text-gray-200 mb-10">
+          Our Services
+        </h2>
+        <div className="flex flex-wrap justify-center gap-6">
+          {["Tax Filing", "Dispute Resolution", "Consulting", "Compliance"].map(
+            (service, idx) => (
+              <div
+                key={idx}
+                className="w-60 p-6 bg-gray-700 text-center rounded-lg shadow-md"
+              >
+                <h3 className="text-xl font-semibold text-indigo-400">
+                  {service}
+                </h3>
+                <p className="mt-2 text-gray-400">
+                  Personalized {service.toLowerCase()} solutions.
+                </p>
+              </div>
+            )
+          )}
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-16 bg-gray-900">
+        <h2 className="text-3xl font-bold text-center text-gray-200 mb-10">
+          Client Testimonials
+        </h2>
+        <div className="flex flex-wrap justify-center gap-6">
+          <div className="w-64 p-6 bg-gray-800 text-center rounded-lg shadow-md">
+            <p className="text-gray-400">
+              "Professional service! They helped me with my tax filings quickly
+              and efficiently."
+            </p>
+            <h4 className="mt-4 font-bold text-gray-200">
+              - A Satisfied Client
+            </h4>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-16 bg-gray-800 text-center">
+        <h2 className="text-3xl font-bold text-gray-200 mb-6">
+          Ready to Solve Your Tax Issues?
+        </h2>
+        <p className="text-gray-400 mb-6 max-w-md mx-auto">
+          Contact us to book a consultation and get expert guidance on your tax
+          needs.
+        </p>
+        <button className="px-6 py-3 bg-indigo-500 text-white font-semibold rounded-md hover:bg-indigo-600 transition">
+          Get in Touch
+        </button>
+      </section>
     </div>
   );
-}
+};
+
+export default Home;
