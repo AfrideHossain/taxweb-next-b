@@ -30,24 +30,22 @@ export default function Hero() {
             priority
           />
         </div>
-        <div className="flex items-center space-x-2 animate-fadeIn">
-          <FaGavel className="text-yellow-400 text-2xl sm:text-3xl md:text-4xl" />
-          <h1 className="text-4xl font-bold text-gray-200 mb-4">
-            Trusted Tax Law Experts in Bangladesh
-          </h1>
-        </div>
+        <h1 className="inline text-4xl font-bold text-gray-200 mb-4">
+          Trusted Tax Law Experts in Bangladesh
+        </h1>
+        {/* <FaGavel className="text-yellow-400 text-4xl inline" /> */}
         <p className="text-gray-400 max-w-md mx-auto mb-6">
           Providing expert tax law services with a focus on compliance, dispute
           resolution, and personalized consulting.
         </p>
 
         {/* Animated Call-to-Action Button */}
-        <button className="btn btn-warning mt-8 px-6 animate-glow hover:animate-none">
+        <button className="btn btn-warning mt-4 md:mt-8 px-6 animate-glow hover:animate-none">
           Get a Free Consultation
         </button>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-6 sm:bottom-10 animate-bounce">
+        <div className="absolute bottom-2 sm:bottom-10 animate-bounce">
           <span className="text-gray-400 text-xs sm:text-sm md:text-base">
             Scroll down
           </span>
