@@ -1,52 +1,23 @@
 import React from "react";
 import Hero from "./components/Homepage/Hero";
+import Services from "./components/Homepage/Services";
+import Testimonials from "./components/Testimonials";
+import About from "./components/Homepage/About";
+import HeroTemp from "./components/Homepage/HeroTemp";
 const Home = () => {
   return (
     <div className="bg-gray-900 text-gray-100">
       {/* Hero Section */}
       <Hero />
+      {/* <HeroTemp /> */}
 
       {/* Services Section */}
-      <section className="py-16 bg-gray-800">
-        <h2 className="text-3xl font-bold text-center text-gray-200 mb-10">
-          Our Services
-        </h2>
-        <div className="flex flex-wrap justify-center gap-6">
-          {["Tax Filing", "Dispute Resolution", "Consulting", "Compliance"].map(
-            (service, idx) => (
-              <div
-                key={idx}
-                className="w-60 p-6 bg-gray-700 text-center rounded-lg shadow-md"
-              >
-                <h3 className="text-xl font-semibold text-indigo-400">
-                  {service}
-                </h3>
-                <p className="mt-2 text-gray-400">
-                  Personalized {service.toLowerCase()} solutions.
-                </p>
-              </div>
-            )
-          )}
-        </div>
-      </section>
+      <Services />
 
       {/* Testimonials Section */}
-      <section className="py-16 bg-gray-900">
-        <h2 className="text-3xl font-bold text-center text-gray-200 mb-10">
-          Client Testimonials
-        </h2>
-        <div className="flex flex-wrap justify-center gap-6">
-          <div className="w-64 p-6 bg-gray-800 text-center rounded-lg shadow-md">
-            <p className="text-gray-400">
-              {`"Professional service! They helped me with my tax filings quickly
-              and efficiently."`}
-            </p>
-            <h4 className="mt-4 font-bold text-gray-200">
-              - A Satisfied Client
-            </h4>
-          </div>
-        </div>
-      </section>
+      <Testimonials />
+
+      <About />
 
       {/* Contact Section */}
       <section className="py-16 bg-gray-800 text-center">

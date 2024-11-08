@@ -1,3 +1,5 @@
+import Footer from "./components/Shared/Footer";
+import Navbar from "./components/Shared/Navbar";
 import "./globals.css";
 import { Lora } from "next/font/google";
 
@@ -14,7 +16,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={lora.className}>{children}</body>
+      <body className={lora.className}>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
